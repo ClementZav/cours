@@ -1,0 +1,44 @@
+*{
+    text-decoration: none;
+    color: brown;
+}
+
+.container{
+    max-width: 1200px; /* boite 1200px max centrée */
+    margin: 0 auto; /* centrage horizontal d'un display block */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pre-header img {
+    width: 15px;
+    height: auto;
+}
+
+.pre-header .container  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    background: #282828;
+    letter-spacing: 1px;
+}
+
+.icon{
+    width: 15px;
+    height: auto;
+}
+
+.pre-header nav div:hover{
+    background: #a1a1a1;
+}
+
+
+.pre-header .pre-header__account{
+    margin-left: auto;
+}
+
+.pre-header nav{
+    display: flex;
+    margin-top: 8px;
+}

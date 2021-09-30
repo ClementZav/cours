@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ikao - Ikéa, mais en mieux !</title>
+    <meta charset="UTF-8">
+
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    
+    <!--montserrat google font avec les variantes --> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet"> 
+    
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+
+</head>
+<body>
+	<!--
+
+		Comment commencer une page HTML ? 
+		- établir un postulat de notre page : 
+			-> quels sont les éléments dont je dispose, 
+			-> y a t-il des éléments récurrents (type de liens, styles de titres, etc)
+			-> Organiser une hierarchie logique du document : prioriser l'importance des éléments
+		- Commencer le code HTML :
+			-> Etablir un squelette souple (uniquement les grandes zones dans un 1er temps)
+			-> Remplir chaque zone de manière de plus en plus précise, et construire le Css en parralèlle 
+			-> Aller à l'essentiel (intégration Grosse maille), puis affiner chaque zones / éléments
+			-> Chaque élément ne doit pas géner le reste de la page
+		- Affiner l'intégration et le rendu
+			-> Garder la maquette sous les yeux au maximum
+			-> Affiner les tailles de typos, écarts, espaces, etc 
+			-> Ajouter des éléments HTML si besoin uniquement pour la mise en page
+			-> Objectif : Avoir l'HTML le plus propre possible (c'est à dire le plus logique et le moins verbeux possible)
+
+		Bonus : la class "container" => 
+			peut servir a mettre un centrer un element structurant ;
+				.container{
+					max-width: 1200px; /* boite 1200px max centrée */
+					margin: 0 auto; /* centrage horizontal d'un display block */
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+		Optimisation CSS : 
+		- Syntaxe BEM pour le nommage des classes : essayer d'etre cohérent niveau marquage et styles
+        - DRY (dont repeat yourself) => mutualisez votre code CSS
+	-->
+
+	<header>
+		<div class="pre-header">
+			
+			<div class="container">
+
+				<nav class="pre-header__coords">
+					<div>
+					<img src="icones/icones-svg/phone-receiver.svg" alt="Icone Telephone" class="icon"/>
+					<a href="tel:+331010101" alt="Numero de telephone">+331010101</a>
+					</div>
+					<div>
+					<img src="icones/icones-svg/mail.svg" alt="Icone mail" class="icon"/>
+					<a href="mailto:info@ikao.com" alt="email">info@ikao.com</a>
+					</div>
+				</nav>
+				<!-- mon compte -->
+
+				<nav class="pre-header__account">
+					<div>
+					<a href="#" alt="Mon compte">Mon compte</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container main-header" id="main-header">
+			<!-- logo -->
+			<img src="images/logos/logo.png">
+
+			<!-- menu -->
+			<nav class="main-header__menu">
+				<a href="#" alt="Lien vers Accueil">Accueil</a>
+				<a href="#" alt="Lien vers Produits">Produits</a>
+				<a href="#" alt="Lien vers A propos">A Propos</a>
+				<a href="#" alt="Lien vers Blog">Blog</a>
+				<a href="#" alt="Lien vers Contact">Contact</a>
+			</nav>
+
+			<!-- recherche ici pas besoin de formulaire (on a pas de zone de saisie) -->
+			<img src="icones/icones-svg/magnifying-glass.svg" alt="Icone rechercher" class="icon"/>
+			<div class="panier">
+				<img src="icones/icones-svg/paper-bag.svg" alt="Icone Panier" class="icon"/>
+				<p>
+					<strong>Paniers</strong>
+					3 produits 74.0€
+				</p>
+			</div>
+
+			<!-- panier -->
+			
+		</div>
+	</header>
+
+
+	<main class="homepage container">
+
+		<section class="products-grid">
+			<!-- ma grille de produits -->
+			<!-- chaque item sera composé de : 
+				- 1 lien
+				- 1 image (ou background)
+				- 1 texte (stylisé de manière différentes selon les cas)
+			-->
+		</section>
+
+		<section class="products-selection">
+			<!-- en ce moment, recents, meilleures ventes ... -->
+			<nav class="products-selection__header">
+				
+			</nav>
+			<div class="produts-list">
+				
+			</div>
+
+		</section>
+
+		
+		<section class="categories">
+			<!-- horloge -->
+			<!-- table basse -->
+			<!-- lampes -->
+		</section>
+
+		<section class="best-products">
+			<!-- meilleures ventes -->
+		</section>
+
+	</main>
+
+
+	<!--footer -->
+	<div class="partners container">
+		<!-- logos des partenaires (suedois mais pas que) -->
+	</div>
+	<footer>
+		<div class="container">
+			<div class="advantages-footer">
+				<!-- livraison offerte, support, carte cadeaux, etc -->
+			</div>
+
+			<div class="main-footer">
+				<!-- liens, logo, newsletter etc -->
+				<div class="company-footer"></div>
+
+				<div class="menu-footer"></div>
+
+				<div class="newsletter-footer"></div>
+			</div>
+		</div>
+	</footer>
+	<div class="sub-footer">
+		<div class="container">
+			<!-- copyright, logos paiement -->
+			<div class="sub-footer__copyright"></div>
+
+			<div class="sub-footer__payments"></div>
+		</div>
+	</div>
+
+</body>
+</html>
