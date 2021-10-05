@@ -763,7 +763,7 @@ a{
 @media screen and (max-width:768px){
     .selection .case-selection, .selection .product-case{
         height: 500px;
-        width: 500px;
+        width: 400px;
         text-align: center;
     }
     .selection {
@@ -824,9 +824,13 @@ a{
     transition: 500ms;
 }
 @media screen and (max-width:993px){
+    body{
+        padding: 0;
+    }
     .categories {
         flex-direction: column;
         width: 96%;
+        justify-content: center;
     }
     
     .categories .product-categorie{
@@ -839,6 +843,11 @@ a{
     
     .table-basse{
         background-position: bottom;
+    }
+}
+@media screen and (max-width:450px) {
+    .categories .product-categorie {
+        width: 400px;
     }
 }
 
