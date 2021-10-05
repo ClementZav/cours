@@ -1,0 +1,1249 @@
+body{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+a{ 
+    color: inherit; /* elle prend la couleur son parent*/
+    text-decoration: none;
+}   
+
+
+
+.header .main
+
+/* HEADER HEADER */ 
+
+
+        /* Pre HEADER */
+.header-toogle{
+    display: none;
+}
+.header-toogle-open,.header-toogle-close{
+    display: none;
+}
+
+
+.pre-header img{
+    width: 15px;
+    height: auto;
+}
+
+.pre-header-bg{
+     background-color: #282828;
+}
+
+.pre-header{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto; 
+    color: #a1a1a1;
+    letter-spacing: 1px;
+}
+
+.pre-header .compte{
+    margin-left: auto;
+}
+
+.pre-header .coords{
+    margin-top: 8px;
+}
+
+.pre-header .coords span{
+    margin-right: 40px;
+}
+.pre-header .coords span, .pre-header .compte{
+    background-color: #3f3e43;
+    padding: 10px;
+}
+
+
+        /* Main header */ 
+
+.main-header {
+    display: flex;
+    padding-top: 20px;
+    justify-content: flex-end;
+    
+    
+    
+}
+
+.logo{
+    margin-right: auto;
+}
+.main-header > nav,.main-header > div{
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.main-header .main-header_cart a{
+    display: flex;
+}
+.main-header .menu{
+    display: flex;
+    flex: 1;
+    margin-left: 100px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+.main-header .menu a:hover{
+    font-weight: 500;
+    color: #d0e9b0;
+    transition: color 300ms;
+    transition: font-weight 300ms;
+}
+
+.main-header .menu a img{
+    width: 20px;
+}
+
+
+.main-header .main-header_cart a strong{
+    font-weight: 500;
+}
+
+.main-header .main-header_cart a img{
+    padding-right: 10px;
+}
+
+
+
+
+@media screen and (max-width:993px){
+
+    .main-header{
+       
+        flex-direction: column;
+    }
+      
+    .logo{
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        text-align: center;
+}
+    
+    .main-header .menu, .main-header_cart{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    
+    }
+    
+    .menu{
+        width: 70%;
+    }
+    
+    .pre-header .coords span, .pre-header .compte{
+        background-color: inherit;
+    }
+
+}
+@media screen and (max-width:768px){
+    .header-toogle-open,.header-toogle-close{
+    display: block;
+}
+    
+    
+    .coords > a{
+        display: none;
+    }
+    
+    .header-toogle{
+        display: block;   
+    }
+    
+    .header-toogle-close{
+        display: none;
+    }
+    
+    #main-header:target{
+        display: block;
+          
+    }
+    
+    #main-header:target .header-toogle-open{
+        display: none;
+    }
+    
+    #main-header:target .header-toogle-close{
+            display: inline;
+        }
+    
+    #main-header .menu{
+        display: none;
+    }
+    
+    #main-header:target .menu{
+            display: inherit;
+            max-height: 500px;
+        }
+    
+    .header-toogle-close img, .header-toogle-open img{
+        width: 25px;
+        margin-top: 5px;
+    }
+    
+    .menu{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .menu a{
+        align-self: center;
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+        border-bottom: 1px solid #666;
+    }
+}
+
+/* CONTAINER */ 
+
+
+/* Un container a 1200pc de large max */ 
+.container{
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+
+
+/* HOMEPAGE HOMEPAGE */ 
+
+.products-banner{
+    display: grid;
+    height: 850px;
+    grid-template-columns: 0.33fr 0.17fr 0.25fr 0.25fr;
+    grid-template-rows: 0.25fr 0.25fr 0.17fr 0.33fr;
+    grid-gap:20px;
+    grid-template-areas:
+        "new-co new-co canap coussin" 
+        "new-co new-co canap accoudoirs"
+        "zio tabouret tabouret tabouret"
+        "totem tabouret tabouret tabouret";
+    transform:  scale(1.00);
+    transition: transform 600ms;
+}
+
+[class *= "products-banner_item"]:hover{
+    transform: translate3d(0,0,0) scale(1.01);
+    transition: transform 1000ms;
+}
+
+
+
+
+.products-banner > [class *= "products-banner_item"]{
+    /*Tt les enfants qui possedent une class qui ressemble à products-banner_item */
+    padding: 15px;
+    overflow: hidden;
+}
+
+
+/* NEW CO */ 
+.products-banner_item1{
+    grid-area:new-co;
+    background-image: url(../images/meubles/nouvellecollection.jpg);
+    background-position: left;
+    background-size: cover;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.new-col{
+    padding: 15px;
+    width: 300px;   
+    color: #ddd;
+}
+
+.new-col .categories{
+    background-color: #444;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.new-col .Titre{
+    font-size: 60px;
+    margin: 0;
+}
+
+.new-col .Titre strong{
+    font-weight: 700;
+}
+
+.new-col .description{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.new-col .prix{
+    font-size: 30px;
+}
+
+/* CANAP */ 
+
+.products-banner_item2{
+    grid-area:canap;
+    background-image: url(../images/meubles/canape3places.jpg);
+    background-position: 30%, center;
+    background-size: cover;
+    color: #ddd;
+}
+
+.acheter-voir{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.canape .categories {
+    letter-spacing: 3px;
+}
+
+.canape .Titre{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Faire un rond */ 
+
+.canape .rond{
+	display: inline-flex; 
+	
+	height: 100px;
+	width: 100px;
+	background: #55AAAA;
+	color:#ddd;
+	border-radius: 50%;
+    float: right;
+    margin-top: 50px;
+}
+
+.canape .rond span{
+        margin: auto;
+        text-align: center;
+}
+
+.canape .old-prix{
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.canape .prix{
+    font-size: 17px;
+    font-weight: 500;
+}
+    
+
+ 
+/*COUSSIN */ 
+.products-banner_item3{
+    grid-area:coussin;
+    background-image: url(../images/meubles/coussinsblancs.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.banc{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.banc .Titre, .banc .description{
+    color: #333;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 0;
+    letter-spacing: 2px;
+    
+}
+
+.banc .Titre{
+    text-transform: uppercase;
+}
+
+.fleche{
+    width: 15px;
+}
+.banc .prix,.banc .link{
+    margin: 0;
+    margin-left: auto;
+}
+
+.banc .prix{
+    margin-top: 50px;
+    color: #DD2222;
+    font-size: 23px;
+    padding: 5px;
+    font-weight: 400;
+}
+
+.banc .link{
+    order: 1;
+    background-color: #282828;
+    color: #ddd;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+
+
+/* ACCOUDOIRS */ 
+.products-banner_item4{
+    grid-area:accoudoirs;
+    background-image: url(../images/meubles/chaise-accourdoirs.png);
+    background-position: 3em 2em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #FAFAFA;
+}
+
+
+.chaise{
+    display: flex;
+    flex-direction: column;
+}
+
+.chaise .Titre{
+    
+    text-transform: uppercase;
+    font-size: 17px;
+    color:#212155;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: auto;
+    margin: 0;
+}
+
+.chaise a, .chaise old-prix, .chaise .prix{
+    margin: 0;
+} 
+
+.chaise a{
+    order: 1;
+    color: #212155;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.chaise .old-prix{
+    color: #aaa;
+    text-decoration: line-through;
+    font-size: 10px;
+}
+
+.chaise .prix{
+    font-size: 20px;
+    color: #212155;
+    
+}
+
+/* ZIO */
+.products-banner_item5{
+    grid-area:zio;
+    background-image: url(../images/meubles/ziodinning.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #d0e9b0;   
+}
+
+.zio{
+    padding-top: 15px;
+    
+}
+
+.zio a{
+    display: flex;
+    flex-direction: column;
+}
+
+.zio .categories , .zio .Titre{
+    color: white;
+    margin: 5px;
+    margin-left: auto;
+    align-self: flex-end;
+    text-align: right;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.zio .Titre{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+.zio a .acheter-voir{
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+
+/* TOTEM */
+.products-banner_item6{
+    grid-area:totem;
+    background-image: url(../images/meubles/totemfloor.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.totem{
+    display: flex;
+    flex-direction: column;
+}
+
+.totem a{
+    display: flex;
+    flex-direction: column;
+}
+
+.totem .categories, .totem .Titre{
+    color:#444;
+    text-align: right;
+    font-weight: 400;
+    margin: 0;
+    margin: 5px;
+    margin-left: auto;
+    align-self: flex-end;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.totem .Titre{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.totem .acheter-voir{
+    align-self: flex-end;
+    font-weight: 200;
+    color: #444;
+}
+
+
+/* TABOURET */
+.products-banner_item7{
+    grid-area:tabouret;
+    background-size: auto;
+    background-position: right;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(../images/meubles/tabouret.jpg);
+    
+}
+
+.tabouret{
+    padding: 20px;
+    height: 100%;
+}
+
+.tabouret .categories{
+    text-transform: uppercase;
+    color: #444;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.tabouret .Titre{
+    color: #444;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0;
+    line-height: 50px;
+}
+
+.tabouret .Titre strong{
+    font-weight: 700;
+}
+
+.tabouret .description{
+    font-size: 12px;
+    margin: 0;
+}
+
+.products-selection{
+        margin-top: 100px;
+    }
+
+@media screen and (max-width:993px){
+    .products-banner{
+        margin-top: 50px;
+        display: grid;
+        height: auto;
+        grid-template-columns: auto;
+        grid-template-rows:auto;
+        grid-gap:5px;
+        grid-template-areas:
+        "new-co new-co"
+        "new-co new-co"
+        "canap coussin" 
+        "canap accoudoirs"
+        "zio totem" 
+        "tabouret tabouret "
+        " tabouret tabouret"
+        ;
+    }
+    
+    
+    .products-banner > [class *= "products-banner_item"]{
+    /*Tt les enfants qui possedent une class qui ressemble à products-banner_item */
+        background-position: center;
+        
+    }
+    .products-selection{
+        margin-top: 100px;
+    }
+}
+
+
+
+
+
+/*************************************************/ 
+/******** SELECTION ********** SELECTION**********/ 
+/*************************************************/
+.product-case{
+    position: relative;
+}
+
+
+
+.products-selection{
+    margin-bottom: 40px;
+}
+
+.products-selection .sort{
+    text-transform: uppercase;
+    display: flex;
+    font-size: 15px;
+}
+
+.products-selection .sort a{
+    padding-right: 20px;
+}
+
+
+
+
+.selection{
+    display: flex;
+}
+.sort a:hover{
+    color: #d0e9b0;
+    transition: color 300ms;
+}
+.selection a{
+    flex: 1 1 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+#recent-border{
+    border-left:2px solid #666;
+    border-right:2px solid #666;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+.selection a:first-child{
+    margin-left: 0;
+}
+
+.selection a:last-child{
+    margin-right: 0;
+}
+
+
+.selection a .product-case{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.selection .case-selection{
+    height: 350px;
+}
+
+.selection a .product-case .product{
+    height:100%;
+}
+
+.product-name{
+    color: #666;
+    font-weight: 500;
+    font-size: 12px;
+}
+.product-name:hover{
+    color: #d0e9b0;
+    transition: color 500ms;
+}
+.product-price{
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.bombi-chair{
+    background-image: url(../images/meubles/bombichair1.png);
+    background-size: cover;
+}
+
+.marvelous{
+    background-image: url(../images/meubles/seater.png);
+    background-size: cover;
+}
+
+.armrests{
+    background-image: url(../images/meubles/chairarmrests.png);
+    background-size: cover;
+}
+
+.promo{
+    position: absolute;
+    top: 20%;
+}
+
+.promo-etiquette{
+    background-color: #b2cc29;
+     padding: 10px 20px 10px 20px;
+}
+
+.promo-etiquette-new{
+    display: block;
+    margin-top: 11px;
+    background-color: #000;
+    padding: 10px 20px 10px 20px;
+    color: white;
+}
+
+.new-bombi{
+    background-image: url(../images/meubles/bombichair.png);
+    background-size: cover;
+}
+
+@media screen and (max-width:993px){
+    .selection .case-selection{
+        height: 250px;
+        margin-bottom: 50px;
+    }
+
+    .promo-etiquette{
+        padding: 5px 10px 5px 10px;
+        font:10px;
+    }
+
+    .promo-etiquette-new{
+        padding: 5px 10px 5px 10px;
+        font:10px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .selection .case-selection, .selection .product-case{
+        height: 500px;
+        width: 500px;
+        text-align: center;
+    }
+    .selection {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*************************************************/ 
+/******** CATEGORIE ********** CATEGORIE*********/  
+/*************************************************/
+
+.categories{
+    display: flex;
+}
+
+.categories .product-categorie{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    padding-top: 40px;
+    letter-spacing: 3px;
+}
+
+.decoration{
+    background-image: url(../images/meubles/horloges.png);
+    background-size: cover;
+}
+
+.table-basse{
+    background-image: url(../images/meubles/tablebase.jpg);
+    background-size: cover;
+}
+
+
+.lampes{
+    background-image: url(../images/meubles/lampes.png);
+    background-size: cover;
+}
+    
+.product-categorie a{
+    margin-top: auto;
+}
+
+.product-categorie div{
+    color: #666;
+    font-size: 12px;
+}
+
+.product-categorie strong{
+    font-size: 23px;
+    font-weight: 700;
+}
+.product-categorie:hover strong{
+    color: #d0e9b0;
+    transition: 500ms;
+}
+@media screen and (max-width:993px){
+    .categories {
+        flex-direction: column;
+        width: 96%;
+    }
+    
+    .categories .product-categorie{
+        margin-top: 5px;
+    }
+    
+    .decoration{
+        background-position: top;
+    }
+    
+    .table-basse{
+        background-position: bottom;
+    }
+}
+
+
+/*************************************************/ 
+/****** BEST PRODUCT ********** BEST PRODUCT*******/ 
+/*************************************************/
+.product-case:hover .product-hover{
+    display: flex;
+}
+.product-hover{
+    position: absolute;
+    display: none;
+    background-color: white;
+    padding-top: 10px;
+    width: 100%;
+    bottom: 57px;
+    justify-content: space-around;
+    opacity: 0.7;
+}
+.product-hover img{
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    border-right: 1px #666 solid;
+    padding: 5px;
+}
+
+.best-products{
+    margin-top: 40px;
+}
+
+.titre{
+    font-size: 23px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;    
+}
+
+.best-products .selection{
+    margin-top: 15px;
+}
+
+.case-best{
+    height: 250px;
+}
+
+
+.puff-chair{
+    background-image: url(../images/meubles/puffchair.jpg)  ;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.daddy-chair{
+    background-image: url(../images/meubles/daddychair.jpeg)  ;
+    background-size: cover;
+    background-position: center;
+}
+
+.wood-chair{
+    background-image: url(../images/meubles/woodchair.jpg)  ;
+    background-size: cover;
+    
+    background-position: center;
+}
+
+.cheers-chair{
+    background-image: url(../images/meubles/cheerschair.png)  ;
+    background-position: center;
+    background-size: cover;
+}
+
+.loiret-chair{
+    background-image: url(../images/meubles/loiretchair.jpg)  ;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:993px){
+    .case-best{
+        height: 200px;
+    }
+    
+    .product-case:hover .product-hover{
+    display: none;
+}
+}
+
+@media screen and (max-width:768px){
+    .case-best{
+        height: 150px;
+    }
+}
+
+
+/*************************************************/ 
+/******** PARTENERS ********** PERTNERS**********/ 
+/*************************************************/
+
+.partners{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.us-partners{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:993px){
+    .us-partners{
+        flex-direction: column;
+    }
+    
+    .us-partners img{
+        width: 100px;
+        align-self: center;
+        height: auto;
+        margin: 10px;
+    }
+}
+
+/*************************************************/ 
+/****** ENGAGEMENT FOOTER ******** ENGAGEMENT FOOTER*******/ 
+/*************************************************/
+
+.bg-footer{
+    background-color: #f6f6f6;
+}
+
+.engagement-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top:50px;
+    padding-bottom:50px;
+    border-bottom: 1px solid #888;
+}
+
+
+.engagement-content .engagement{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.engagement-content .engagement strong{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+ 
+.engagement-content .engagement i{
+    padding-right: 10px;
+}
+ 
+
+.engagement-content .engagement p{
+    font-size: 12px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.engagement-icon{
+    width:50px; 
+    height: auto;
+    margin-right:30px;
+}
+
+@media screen and (max-width:993px){
+    .engagement img{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .engagement-content .engagement strong{
+        font-size:12px;
+    }
+    
+    .engagement-content .engagement p{
+        font-size:10px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .engagement-content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .engagement-content .engagement{
+        align-self: center;
+        margin: 10px;
+        width: 200px;
+    }
+}
+
+/*************************************************/ 
+/****** MAIN FOOTER ******** MAIN FOOTER*******/ 
+/*************************************************/
+
+footer a:hover{
+    color: #d0e9b0;
+    transition: color 500ms;
+}
+.main-footer{
+    margin-top: 50px;
+    display: grid;
+    padding: 0;
+    grid-template-areas:
+        "contact categories info compte newsletter" 
+        "contact categories info compte newsletter"
+        "contact categories info compte rs"
+        "contact categories info compte rs";
+    font-size: 13px;
+    color: #666;
+}
+
+
+.footer-contact{
+    grid-area:contact;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer-contact img{
+    width: 200px;
+}
+
+.footer-contact .slogan{
+    margin-top: 10px;
+}
+.footer-contact p{
+    margin: 5px;
+}
+
+.footer-contact .locate{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.footer-categories{
+    grid-area:categories; 
+     display: flex;
+    flex-direction: column;
+}
+
+.footer-information{
+    grid-area:info;
+     display: flex;
+    flex-direction: column;
+}
+
+.footer-compte{
+    grid-area:compte;
+     display: flex;
+    flex-direction: column;
+}
+
+.newsletter{
+    grid-area:newsletter;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+    
+}
+.newsletter div, .newsletter strong{
+    
+    margin-left: auto;
+}
+.newsletter #email{
+    border-radius: 50px 0px 0px 50px;
+    border:none;
+    height: 43px;
+    background-color: #fff;
+    margin: 0;
+    width: 170px;
+}
+
+.newsletter #suscribe{
+    border-radius: 0px 50px 50px 0px;
+    border: none;
+    height: 43px;
+    background-color: #696969; 
+    color: white;
+    width: 90px;
+    margin: 0;
+}
+
+    
+
+.reseauxsociaux{
+    grid-area: rs;
+    display: flex;
+    flex-direction: column;
+}
+
+.reseauxsociaux strong, .reseauxsociaux .rs-icone{
+    margin-bottom: 30px;
+    margin-left: auto;
+} 
+
+.reseauxsociaux img{
+    width: 20px;
+    height: auto;
+}
+
+.footer strong{
+    margin-top: 30px;
+    margin-bottom: 35px;
+    font-weight: 700;
+    
+}
+
+.footer a{
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width:993px){
+    .main-footer{
+        grid-template-areas:
+            "contact categories info compte " 
+            "contact categories info compte "
+            "contact categories info compte "
+            "contact categories info compte "
+            "newsletter newsletter rs rs";
+    }
+    
+    .footer{
+        margin-bottom: 20px;
+    }
+    
+    .newsletter div, .newsletter strong{
+        margin: 0;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    
+    .reseauxsociaux strong, .reseauxsociaux .rs-icone{
+       margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:768px){ 
+    .main-footer{
+        grid-template-areas:
+            "contact contact contact " 
+            "categories info compte "
+            "categories info compte "
+            "categories info compte "
+            "newsletter newsletter newsletter"
+            "rs rs rs";
+    }
+    
+    .footer-contact{
+        margin-bottom: 10px;
+    }
+    
+    .footer-contact img, .footer-contact p, .footer-contact div{
+        
+        align-self: center;
+    }
+    
+    .footer-categories, .footer-information, .footer-compte{
+        text-align: center;
+    }
+    
+    .newsletter div, .newsletter strong, .reseauxsociaux strong, .reseauxsociaux .rs-icone {
+        align-self: center;
+    }
+}
+
+/***************** SUBfooter********************************   ******************SUBfooter******************/
+.bg-sub-footer{
+    background-color: white;
+}
+
+.sub-footer{
+    display: flex;
+}
+
+.sub-footer strong{
+    font-weight: 700;
+}
+
+.sub-footer p{
+    font-size: 12px;
+    color: #666;
+}
+
+.sub-footer .logo-payement{
+    margin-left: auto;
+    padding-top: 5px;
+}
+
+.logo-payement img{
+    width: 30px;
+}
+    
+    
+    
+    
+    
+    
+    
